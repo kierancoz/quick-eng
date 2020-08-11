@@ -1,0 +1,51 @@
+{
+    "weight" : 50.232,
+    "cog_location" : [22.5711, 9.606, -60.762],
+    "contact_patch_cases" :
+    {
+        "cornering" : 
+        {
+            "force" : [-553, -254, 45],
+            "location" : [23.89, 0, -61],
+            "acceleration" :[2.1, -1, 0]
+        },
+        "braking" : 
+        {
+            "force" : [0, -350, 475],
+            "location" : [23.89, 0, -61],
+            "acceleration" :[0, -1, 1.8]
+        }
+    },
+    "forces": [
+        {
+            "direction" : [-0.772, -0.325, 0.545],
+            "location" : [21.788, 12.679, -61.129],
+            "name" : "forward upper control arm point"
+        },
+        { 
+            "direction" : [-0.761, -0.320, -0.564], 
+            "location" : [21.788, 12.679, -61.129],
+            "name" : "rear upper control arm point"
+        },
+        { 
+            "direction" : [-0.7237, -0.5426, -0.426],
+            "location" : [20.072, 11.279, -60.729],
+            "name" : "pushrod point"
+        },
+        { 
+            "direction" : [0, 0, 0], 
+            "location" : [22.183, 5.14, -60.866],
+            "name" : "forward lower control arm point - TODO"
+        },
+        { 
+            "direction" : [0, 0, 0], 
+            "location" : [22.183, 5.14, -60.866],
+            "name" : "rear lower control arm point - TODO"
+        },
+        { 
+            "direction" : [0, 0, 0], 
+            "location" : [22.183, 5.14, -60.866],
+            "name" : "toe point - TODO"
+        }
+    ]
+}
