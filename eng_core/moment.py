@@ -11,6 +11,16 @@ class Moment(Force):
         for val in [self.value * coeff for coeff in list(self.moment_coefficients)]:
             yield val
 
+    def __add__(self, other):
+        self_list = list(self)
+        other_list = list(other)
+        return Vector([self_list[i] + other_list[i] for i in range(3)])
+
+    def __sub__(self, other):
+        self_list = list(self)
+        other_list = list(other)
+        return Vector([self_list[i] - other_list[i] for i in range(3)])
+
     @staticmethod
     def to_moment(force):
         moment = copy.deepcopy(force)

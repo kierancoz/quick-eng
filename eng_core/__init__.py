@@ -16,7 +16,7 @@ from eng_core.moment import Moment
 # Output = [f0, f1, f2, f3, f4, f5]
 ### Example ###
 
-# Input types {Force}, {[Force]}
+# Input types {Force}, {Vector} {[Force]}
 def space_truss_solver(acting_force, acting_moment, output_forces):
     force_count = len(output_forces)
     a_matrix = [[] for i in range(6)]

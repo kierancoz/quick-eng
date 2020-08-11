@@ -7,7 +7,6 @@ from eng_core import CoordinateSystem, Vector, Force, Moment, space_truss_solver
 
 def import_situation(path):
     return_dict = {}
-    import os
     info_dict = json.load(open(path, "r+"))
     main_coords = CoordinateSystem(info_dict.get("cog_location"))
 
