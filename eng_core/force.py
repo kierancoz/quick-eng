@@ -2,26 +2,29 @@ from eng_core import Vector
 
 
 class Force(Vector):
-    def __init__(self, vector, coords = None, amount = None):
-        super().__init__(list(vector))
-        self.location = coords
-        self.value = amount
+    def __init__(self, vector, magnitude = None):
+        super().__init__(vector)
+        self.value = magnitude
 
     def __iter__(self):
-        for val in [self.Fx, self.Fy, self.Fz]:
-            yield val
+        super_iter = super().__iter__()
+        while(True):
+            try:
+                yield next(super_iter) * self.value
+            except StopIteration:
+                break
 
     def __add__(self, other):
         self_list = list(self)
         other_list = list(other)
         new_list = Vector([self_list[i] + other_list[i] for i in range(3)])
-        return Force(new_list, amount = new_list.magnitude)
+        return Force(new_list, magnitude = new_list.magnitude)
 
     def __sub__(self, other):
         self_list = list(self)
         other_list = list(other)
         new_list = Vector([self_list[i] - other_list[i] for i in range(3)])
-        return Force(new_list, amount = new_list.magnitude)
+        return Force(new_list, magnitude = new_list.magnitude)
 
     # Absolute value of Force
     @property
@@ -32,24 +35,15 @@ class Force(Vector):
     def value(self, value):
         self.__value = value
 
-    # Location
-    @property
-    def location(self):
-        return self.__location
-
-    @location.setter
-    def location(self, location):
-        self.__location = location
-
     # Forces
     @property
     def Fx(self):
-        return self.X * self.value
+        return list(self)[0]
     
     @property
     def Fy(self):
-        return self.Y * self.value
+        return list(self)[1]
 
     @property
     def Fz(self):
-        return self.Z * self.value
+        return list(self)[2]

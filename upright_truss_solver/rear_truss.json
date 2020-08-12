@@ -33,18 +33,18 @@
             "name" : "pushrod point"
         },
         { 
-            "direction" : [0, 0, 0], 
+            "direction" : [-0.866, -0.146, 0.478],
             "location" : [22.183, 5.14, -60.866],
             "name" : "forward lower control arm point - TODO"
         },
         { 
-            "direction" : [0, 0, 0], 
+            "direction" : [-0.903, -0.152, -0.401], 
             "location" : [22.183, 5.14, -60.866],
             "name" : "rear lower control arm point - TODO"
         },
         { 
-            "direction" : [0, 0, 0], 
-            "location" : [22.183, 5.14, -60.866],
+            "direction" : [-0.93, -0.226, 0.291], 
+            "location" : [22.315, 9.107, -57.502],
             "name" : "toe point - TODO"
         }
     ]

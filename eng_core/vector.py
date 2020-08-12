@@ -2,23 +2,31 @@
 
 class Vector(object):
     def __init__(self, components):
-        self.__components = components
+        self.components = list(components)
 
     def __iter__(self):
         for comp in self.__components:
             yield comp
 
     @property
+    def components(self):
+        return self.__components
+
+    @components.setter
+    def components(self, components):
+        self.__components = components
+
+    @property
     def X(self):
-        return self.__components[0]
+        return self.components[0]
 
     @property
     def Y(self):
-        return self.__components[1]
+        return self.components[1]
 
     @property
     def Z(self):
-        return self.__components[2]
+        return self.components[2]
 
     @property
     def magnitude(self):
