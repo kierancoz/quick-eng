@@ -36,6 +36,7 @@ def import_situations(path):
 
         # get force and moment
         active_force = weight_force - contact_force
+        print(list(active_force))
         active_moment = Moment.to_moment(weight_force, Vector([0,0,0])) - Moment.to_moment(contact_force, contact_location)
 
         # get location and direction of force
